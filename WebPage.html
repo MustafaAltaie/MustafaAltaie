@@ -1,0 +1,757 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body id="body">
+        <div id="backgroundImg"></div>
+
+        <b style="position:fixed; 
+        color: #000;
+        opacity:0.2;
+        font-size: 100px; 
+        margin: 20% 25% 25% 25%; 
+        text-align: center;">THE LOGO</b>
+        
+        <div id="main">
+            <input id="signInNameText" placeholder="Input your name"><br>
+            <input id="signInMailText" placeholder="Input your e-mail"><br>
+
+            <button id="signIn"><b>Sign in</b></button>
+
+
+        </div>
+
+
+            <div id="ThreeButtons">
+                <button id="myPhotos"><b>References</b></button>
+                <button id="ourOffers"><b>Our offers</b></button>
+                <button id="signUp"><b>Sign up</b></button>
+            </div>
+
+
+        <div id="contactBList"><br><br>
+            <input id="contactMailText" placeholder="Enter your email">
+            <textarea id="contactMessageText" placeholder="Enter your message"></textarea>
+            <button id="contactButton">Send email</button>
+            <b id="contactUs">Contact Us</b>
+        </div>
+        
+        <div style="width:100%; height: 98%;"></div>
+
+        <div id="refForm">
+            <img id="img1" src="https://i.ibb.co/1KddJfH/img1.jpg"></img>
+            <img id="img2" src="https://i.ibb.co/JtfZ9Xt/img2.jpg"></img>
+            <img id="img3" src="https://i.ibb.co/mXR9xq0/img3.jpg"></img><br>
+            <img id="img4" src="https://i.ibb.co/2N3Ww3B/img4.jpg"></img>
+            <img id="img5" src="https://i.ibb.co/rmgzJDy/img5.jpg"></img>
+            <img id="img6" src="https://i.ibb.co/0FVB0pT/img6.jpg"></img>
+            <img id="imgMain" src="https://i.ibb.co/0FVB0pT/img6.jpg"></img>
+        </div>
+
+        <div id="offersAria">
+
+        </div>
+
+        <div id="offer1">
+            <a>Offer 1</a>
+        </div>
+
+        <div id="offer2">
+            <a>Offer 2</a>
+        </div>
+
+        <div id="offer3">
+            <a>Offer 3</a>
+        </div>
+
+        <div id="titleBar">
+            <marquee style="height:100%; width:100%; text-align: center;" direction=up  loop="infinite" scrollamount="8">
+                <h2 style="background-color: rgba(0,0,0,1); color: #970">The advertisements</h2>
+                <img src="https://i.ibb.co/WD2bbn2/film.png" style="opacity: 0.2; width:100%"></img>
+        </marquee>
+        </div>
+         
+        <div style="width: 100%; height:93%;"></div>
+
+        <div id="signUpAria">
+            <input id="fnSignUpText" placeholder="First name">
+            <input id="lnSignUpText" placeholder="Last name"><br>
+            <input id="emailSignUpText" placeholder="Email address">
+            <button id="signUpButton">Sign up</button id="fnText"><br>
+            <input id="pwSignUpText" type="password" placeholder="Your password">
+            <input id="rePwSignUpText" type="password" placeholder="Re-enter password">
+            
+        </div>
+
+    </body>
+
+
+    <style>
+        @media only screen and (max-width: 768px) {
+            body > #titleBar{
+                z-index: 1;
+                left:58%;
+            }
+            body > b{
+                display: none;
+            }
+            #main > #signIn{
+                width: 120px;
+                margin: 55px 0 0 10px;
+                left: 0px;
+                color: #da0;
+            }
+            #threeButtons > #signUp, #threeButtons > #ourOffers, #threeButtons > #myPhotos{
+                display: none;
+            }
+            body > #refForm{
+                left:-20px;
+                height: 100%;
+                min-width: 768px;
+                background-image: linear-gradient(#222,#333, #222);
+                border: solid 1px #d90;
+                margin-bottom: 20px;
+            }
+            #refForm > img{
+                border-radius: 10px;
+                width:30%;
+                margin: 20px -15px 0 25px;
+                opacity: 0.5;
+            }
+            #refForm > #imgMain{
+                left:160px;
+                top: 500px;
+                width:50%;
+                height:auto;
+            }
+            body > #offersAria{
+                z-index: 2;
+                position: absolute;
+                width: 1000px;
+                min-width: 500px;
+                height:90%;
+                background-color: #000;
+                left:0;
+                opacity: 0.6;
+                border:solid 1px #d90;
+            }
+            body > #offer1, body > #offer2, body > #offer3{
+                float: down;
+                height: 125px;
+                width: 90%;
+                min-width: 500px;
+                margin: 50px 0 -20px 25px;
+                padding: 50px 10px 50px 10px;
+            }
+            body > #signUpAria{
+                width: 100%;
+                min-width: 500px;
+                left: 0;
+            }
+            #signUpAria > img{
+                display: none;
+            }
+            #signUpAria > #fnSignUpText, #signUpAria > #lnSignUpText, #signUpAria > #emailSignUpText, #signUpAria > #pwSignUpText, #signUpAria > #rePwSignUpText, #signUpAria > button{
+                width:45%;
+            }
+        }
+        body{
+            overflow-x: hidden;
+        }
+        #backgroundImg{
+            position: fixed;
+            background-image: linear-gradient(#022, #078, #022);
+            width: 100%;
+            height:100%;
+            left:0;
+        }
+        #threeButtons{
+            z-index: 100;
+            position: fixed;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin: 20px -60px 0 216px;
+            height:9%;
+            grid-gap: 5px;
+        }
+        #threeButtons > button{
+            background-color: #023;
+            color: #a70;
+            font-size: auto;
+            outline: none;
+            width: 120px;
+            height: 100%;
+            border-radius: 10px;
+            margin: auto;
+            padding: 0 3px 0 0;
+            cursor: pointer;
+            border: solid 1px #753;
+            box-shadow:  0px 3px 5px 1px #111;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        #myPhotos:hover, #signUp:hover, #ourOffers:hover{
+            background-image: linear-gradient(#123, #034);
+            color:#fa0;
+            border-color: #f90;
+        }
+        #myPhotos:active, #signUp:active, #ourOffers:active{
+            background-image: linear-gradient(#034, #123);
+            padding-top: 7px;
+            -webkit-box-shadow: 0 0 0 0 #111;
+            box-shadow:  0 0 0 0 #111;
+            border: solid 1px #111;
+        }
+        #signIn{
+            background-color:  #023;
+            color: #a70;
+            border: solid #860 1px;
+            border-radius: 50px;
+            font-size: auto;
+            outline: none;
+            width: 120px;
+            min-width: 120px;
+            height: 26%;
+            margin: 60px 0 0 85px;
+            padding: 0 3px 0 0;
+            transition: width 0.3s linear 0.2s, margin 0.3s linear 0.2s, border-radius 0.3s linear 0.2s, color 0.2s, border-color 0.2s;
+            cursor: pointer;
+        }
+        #signIn:hover{
+            color:#fa0;
+            border-color:#fa0;
+        }
+        #signIn:active{
+            padding: 10px 0 0 0;
+        }
+        #imgMain{
+            z-index: 60;
+            position: absolute;
+            height: 70%;
+            border-radius: 20px;
+            border: solid #fd4 1px;
+            margin: -11% -9% 3% 14%;
+        }
+        #titleBar{
+            z-index: 50;
+            position: fixed;
+            height:100%;
+            width: 17%;
+            min-width: 300px;
+            left:80%;
+            top:0;
+            background-color: hsl(37 100% 20%);
+            border:solid 1px;
+            border-left-color: #ff9;
+            border-right-color: #000;
+            font-family: Arial;
+            text-align: center;
+            font-size: 25px;
+            box-shadow:  5px 0px 10px 0px #111;
+        }
+        #signUpAria{
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            min-width: 1500px;
+            height: 25%;
+            border: solid 1px #d90;
+            background-color: #222;
+        }
+        #signUpAria > input, button{
+            position: relative;
+            font-size: 20px;
+            margin: 20px 0 0 20px;
+            width: 20%;
+            height: 21%;
+            border: solid 1px #d90;
+            border-radius: 5px;
+            outline: none;
+            background-color: #034;
+            color: #d90;
+            padding-left: 20px;
+            box-shadow:  0px 2px 5px 1px #000;
+        }
+        #signUpAria > input:active, button:active{
+            box-shadow:  0 0 0 0 #000;
+        }
+        #signUpAria > button{
+            background-color: #a60;
+            color: black;
+            padding-left: 0;
+        }
+        #signUpAria > button:active{
+            background-color: #111;
+            color: a60;
+        }
+        #offer1, #offer2, #offer3{
+            z-index: 3;
+            position: relative;
+            margin:10% -13% 0 15%;
+            height: 30%;
+            width: 10%;
+            min-width: 150px;
+            float: left;
+            border-radius: 10px;
+            border: solid 1px #fff;
+            padding: 100px 40px 0px 40px;
+            text-align: center;
+            font-family: Arial;
+            font-size: 70px;
+            transition: font-size 0.3s, width 0.3s, height 0.3s, margin 0.3s;
+        }
+        #offer3{
+            background-color: #960;
+            color: #740;
+        }
+        #offer2{
+            background-color: #040;
+            color: #030;
+            height: 40%;
+            width: 12%;
+            margin:8% -14% 0 14%;
+            font-size: 78px;
+        }
+        #offer1{
+            background-color: #045;
+            color: #034;
+        }
+        #offersAria{
+            z-index: 1;
+            position: absolute;
+            width:100%;
+            height:100%;
+            background-color: black;
+            left:0;
+            opacity: 0.7;
+        }
+        #refForm{
+            z-index: 90;
+            position: relative;
+            width:100%;
+            min-width: 1500px;
+            height: 80%;
+            background-image: linear-gradient(#111,#222, #111);
+            border: solid 1px #d90;
+        }
+        #img1, #img2, #img3, #img4, #img5, #img6{
+            z-index: 50;
+            position: relative;
+            width:15%;
+            border: solid #fd4 1px;
+            transition: width 0.3s, margin 0.3s, padding 0.3s;
+            border-radius: 5px;
+            margin: 3% -9% -2% 10%;
+            opacity: 0.5;
+            box-shadow:  0px 5px 10px 5px #000;
+        }
+        #main{
+            z-index: 96;
+            position: fixed;
+            background-image: linear-gradient(#333, #111);
+            border-bottom: solid 1px #d90;
+            width:100%;
+            height: 30%;
+            left:0;
+            top:-20%;
+            transition: top 0.3s;
+            box-shadow:  0px 2px 5px 0 #000;
+        }
+        #main > input{
+            position: relative;
+            font-size: 20px;
+            height: 18%;
+            min-width: 500px;
+            max-width: 500px;
+            top: 10%;
+            left: 30px;
+            margin-bottom: 20px;
+            background-color: rgb(15,37,54);
+            color: #aaa;
+            border: none;
+            padding-left: 10px;
+            outline: solid 1px #aaa;
+        }
+        #contactBList{
+            z-index: 95;
+            background-color: #023;
+            position: fixed;
+            width: 390px;
+            min-width: 390px;
+            height: 35%;
+            top: 20%;
+            left: -337;
+            border: solid 1px #b80;
+            border-radius: 10px;
+            box-shadow:  -5px 5px 5px 3px #000;
+            transition: left 0.5s, width 0.5s, height 0.5s, border-color 0.2s;
+        }
+        #contactBList:hover{
+            border-color: #fa0;
+        }
+        #contactBList:active{
+            box-shadow:  0 0 0 0 #222;
+            top: 20.3%;
+        }
+        #contactBList:hover > #contactUs{
+            color: #fa0;
+        }
+        #contactMailText, #contactMessageText, #contactButton{
+            font-size: 140%;
+            width: 75%;
+            height: 16%;
+            margin: 2% 0 0 8%;
+            outline: none;
+            border: solid 1px #b80;
+            background-color: #ccc;
+            color: #111;
+            border-radius: 10px;
+        }
+        #contactUs{
+            position: absolute;
+            transform: rotate(270deg);
+            text-align: center;
+            left: 55%;
+            cursor: pointer;
+            font-size: 160%;
+            width: auto;
+            min-width: 130px;
+            padding: 15px 80px 17px 70px;
+            top:40%;
+            color: #a70;
+            transition: color 0.3s;
+        }
+        #contactButton{
+            background-color: #970;
+            color: #012;
+            border:none;
+            padding: 0 0 0 0;
+            border: solid 1px #752;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        #contactButton:hover{
+            border-color: #fff;
+            background-color: #fc0;
+        }
+        #contactMailText{
+            padding: 0 0 0 3%;
+        }
+        #contactMessageText{
+            padding: 2% 0 0 3%;
+            max-height: 33%;
+            max-width: 75%;
+            min-height: 33%;
+            min-width: 75%;
+            font-family: Arial;
+        }
+    </style>
+    
+    <script>
+
+
+        var signInCase = 0;
+        document.getElementById("signIn").onmouseup=(function(){
+            if(signInCase == 1){
+                if(document.querySelector('#signInNameText').value == '' && document.querySelector('#signInMailText').value == ''){
+                    alert("The fields is empty!")
+                }
+                else if(document.querySelector('#signInNameText').value == ''){
+                    alert("The name field is empty!");
+                }
+                else if(document.querySelector('#signInMailText').value == ''){
+                    alert("The mail field is empty!");
+                }
+                else{
+                    alert("Registeration done! Thanks "+document.querySelector('#signInNameText').value+" for registering!");
+                    document.querySelector('#signInMailText').value = '';
+                    document.querySelector('#signInNameText').value = '';
+                }
+            }
+            else{
+                document.addEventListener("click", function(evt) {
+                    var divAria = document.getElementById("main");
+                    var clickAria = evt.target;
+                    if (window.matchMedia("(min-width: 768px)").matches) {
+                        do {
+                            if (clickAria == divAria) {
+                                document.getElementById("main").style.top= "0";
+                                document.getElementById("signIn").style.width= "500px";
+                                document.getElementById("signIn").style.margin= "30px 0 -10px 30px";
+                                document.getElementById("signIn").style.borderRadius= "10px";
+                                document.getElementById("myPhotos").style.display= "none";
+                                document.getElementById("ourOffers").style.display= "none";
+                                document.getElementById("signUp").style.display= "none";
+                                signInCase = 1;
+                                return;
+                            }
+                            clickAria = clickAria.parentNode;
+                        }
+                        while (clickAria);
+                        document.getElementById("main").style.top= "-20%";
+                        document.getElementById("signIn").style.width= "120px";
+                        document.getElementById("signIn").style.margin= "60px 0 0 85px";
+                        document.getElementById("signIn").style.borderRadius= "40px";
+                        document.getElementById("myPhotos").style.display= "block";
+                        document.getElementById("ourOffers").style.display= "block";
+                        document.getElementById("signUp").style.display= "block";
+                        signInCase = 0;
+                    }
+                    else{
+                        do {
+                            if (clickAria == divAria) {
+                                document.getElementById("main").style.top= "0";
+                                document.getElementById("signIn").style.width= "500px";
+                                document.getElementById("signIn").style.margin= "30px 0 0 30px";
+                                document.getElementById("signIn").style.borderRadius= "10px";
+                                signInCase = 1;
+                                return;
+                            }
+                            clickAria = clickAria.parentNode;
+                        }
+                        while (clickAria);
+                        document.getElementById("main").style.top= "-20%";
+                        document.getElementById("signIn").style.width= "120px";
+                        document.getElementById("signIn").style.margin= "55px 0 0 10px";
+                        document.getElementById("signIn").style.borderRadius= "40px";
+                        signInCase = 0;
+                    }
+                });
+            }
+        });
+
+
+
+        document.addEventListener("click", function(evt) {
+            var divAria = document.getElementById("contactBList");
+            var clickAria = evt.target;
+            do {
+                if (clickAria == divAria) {
+                    document.getElementById("contactBList").style.left= "-10px";
+                    return;
+                }
+                clickAria = clickAria.parentNode;
+            }
+            while (clickAria);
+            document.getElementById("contactBList").style.left= "-337px";
+        });
+
+
+
+        document.getElementById("myPhotos").onmouseup=(function(){
+            window.scroll({
+            top: 775, 
+            behavior: 'smooth'
+            });
+        });
+
+        document.getElementById("ourOffers").onmouseup=(function(){
+            window.scroll({
+            top: 1585, 
+            behavior: 'smooth'
+            });
+        });
+
+        document.getElementById("signUp").onmouseup=(function(){
+            window.scroll({
+            top: 2000, 
+            behavior: 'smooth'
+            });
+        });
+
+        var i = 0;
+        var ii = -1;
+        var mainImg = 0;
+
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            setInterval(function(){
+                i++;
+                ii++;
+                if(i == 1){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/1KddJfH/img1.jpg";
+                }
+                else if(i == 2){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/JtfZ9Xt/img2.jpg";
+                }
+                else if(i == 3){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/mXR9xq0/img3.jpg";
+                }
+                else if(i == 4){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/2N3Ww3B/img4.jpg";
+                }
+                else if(i == 5){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/rmgzJDy/img5.jpg";
+                }
+                else if(i == 6){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/0FVB0pT/img6.jpg";
+                }
+                document.getElementById("img"+i).style.width = "17%";
+                document.getElementById("img"+i).style.margin = "2% -10% -3% 9%";
+                document.getElementById("img"+ii).style.width = "15%";
+                document.getElementById("img"+ii).style.margin = "3% -9% -2% 10%";
+                if(i >= 6){
+                    i=0;
+                }
+                else if(ii >= 6){
+                    ii = 0;
+                }
+            },2000);
+        }
+        else{
+            setInterval(function(){
+                i++;
+                ii++;
+                if(i == 1){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/1KddJfH/img1.jpg";
+                }
+                else if(i == 2){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/JtfZ9Xt/img2.jpg";
+                }
+                else if(i == 3){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/mXR9xq0/img3.jpg";
+                }
+                else if(i == 4){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/2N3Ww3B/img4.jpg";
+                }
+                else if(i == 5){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/rmgzJDy/img5.jpg";
+                }
+                else if(i == 6){
+                    document.getElementById("imgMain").src = "https://i.ibb.co/0FVB0pT/img6.jpg";
+                }
+                document.getElementById("img"+i).style.width = "33%";
+                document.getElementById("img"+i).style.margin = "3  -27px -12px 14px";
+                document.getElementById("img"+ii).style.width = "30%";
+                document.getElementById("img"+ii).style.margin = "20  -15px 0 25px";
+                if(i >= 6){
+                    i=0;
+                }
+                else if(ii >= 6){
+                    ii = 0;
+                }
+            },2000);
+        }
+
+
+        var titleBarColorCounter = 15*50;
+        var titleBarColorCounterCase = 0;
+
+        setInterval(function(){
+            if(titleBarColorCounterCase == 0){
+                titleBarColorCounter++;
+                if(titleBarColorCounter >= 40*50){
+                    titleBarColorCounterCase = 1;
+                }
+            }
+            else{
+                titleBarColorCounter--;
+                if(titleBarColorCounter <= 15*50){
+                    titleBarColorCounterCase = 0;
+                }
+            }
+            document.getElementById("titleBar").style.backgroundColor = "hsl(40 70% "+titleBarColorCounter/50+"%)";
+        },1);
+        
+        document.getElementById("offer1").onmouseenter=(function(){
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                document.getElementById("offer2").style.width = "10%";
+                document.getElementById("offer2").style.height = "30%";
+                document.getElementById("offer2").style.margin = "10% -13% 0 15%";
+                document.getElementById("offer2").style.fontSize = "70px";
+                document.getElementById("offer1").style.width = "12%";
+                document.getElementById("offer1").style.height = "39%";
+                document.getElementById("offer1").style.margin = "8% -14% 0 14%";
+                document.getElementById("offer1").style.fontSize = "78px";
+            }
+        });
+        document.getElementById("offer1").onmouseleave=(function(){
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                document.getElementById("offer1").style.width = "10%";
+                document.getElementById("offer1").style.height = "30%";
+                document.getElementById("offer1").style.margin = "10% -13% 0 15%";
+                document.getElementById("offer1").style.fontSize = "70px";
+                document.getElementById("offer2").style.width = "12%";
+                document.getElementById("offer2").style.height = "39%";
+                document.getElementById("offer2").style.margin = "8% -14% 0 14%";
+                document.getElementById("offer2").style.fontSize = "78px";
+            }
+        });
+        document.getElementById("offer3").onmouseenter=(function(){
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                document.getElementById("offer2").style.width = "10%";
+                document.getElementById("offer2").style.height = "30%";
+                document.getElementById("offer2").style.margin = "10% -13% 0 15%";
+                document.getElementById("offer2").style.fontSize = "70px";
+                document.getElementById("offer3").style.width = "12%";
+                document.getElementById("offer3").style.height = "39%";
+                document.getElementById("offer3").style.margin = "8% -14% 0 14%";
+                document.getElementById("offer3").style.fontSize = "78px";
+            }
+        });
+        document.getElementById("offer3").onmouseleave=(function(){
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                document.getElementById("offer3").style.width = "10%";
+                document.getElementById("offer3").style.height = "30%";
+                document.getElementById("offer3").style.margin = "10% -13% 0 15%";
+                document.getElementById("offer3").style.fontSize = "70px";
+                document.getElementById("offer2").style.width = "12%";
+                document.getElementById("offer2").style.height = "39%";
+                document.getElementById("offer2").style.margin = "8% -14% 0 14%";
+                document.getElementById("offer2").style.fontSize = "78px";
+            }
+        });
+
+
+
+
+        document.getElementById("contactButton").onmouseup=(function(){
+            if(document.querySelector('#contactMailText').value == '' && document.querySelector('#contactMessageText').value == ''){
+                    alert("The fields is empty!");
+                }
+                else if(document.querySelector('#contactMailText').value == ''){
+                    alert("The mail field is empty!");
+                }
+                else if(document.querySelector('#contactMessageText').value == ''){
+                    alert("The message field is empty!");
+                }
+                else{
+                    alert("Message is sent! We will answer you asap");
+                    document.querySelector('#contactMessageText').value = '';
+                    document.querySelector('#contactMailText').value = '';
+                }
+        });
+
+
+        document.getElementById("signUpButton").onmouseup=(function(){
+
+            var fnsut = document.querySelector('#fnSignUpText').value;
+            var lnsut = document.querySelector('#lnSignUpText').value;
+            var emsut = document.querySelector('#emailSignUpText').value;
+            var pwsut = document.querySelector('#pwSignUpText').value;
+            var rpsut = document.querySelector('#rePwSignUpText').value;
+
+            if(fnsut == '' || lnsut == '' || emsut == '' || pwsut == '' || rpsut == ''){
+                    alert("Make sure to fill all the fields!");
+                }
+                else if(pwsut != rpsut){
+                    alert("The passwords do not match!");
+                }
+                else{
+                    alert("Thanks "+fnsut+" "+lnsut+" for signing up!");
+                    document.querySelector('#fnSignUpText').value = "";
+                    document.querySelector('#lnSignUpText').value = "";
+                    document.querySelector('#emailSignUpText').value = "";
+                    document.querySelector('#pwSignUpText').value = "";
+                    document.querySelector('#rePwSignUpText').value = "";
+                }
+        });
+
+
+        document.getElementById('body').onresize=(function(){
+            if (document.getElementById('body').offsetWidth < 769){
+                window.location.reload();
+            }
+        });
+        
+
+    </script>
+</html>
